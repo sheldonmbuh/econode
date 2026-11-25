@@ -1,26 +1,18 @@
 # EcoNode
 
-EcoNode helps orchard workers prune better. The worker wears AR glasses that show which branches to cut, guided by a computer vision model trained on expert pruning decisions. The system is designed to work offline, in the orchard, where connectivity is unreliable.
+EcoNode is a University of Waterloo team project developing computer-vision guidance for apple-tree pruning. The intended MVP gives orchard workers guidance through off-the-shelf augmented-reality glasses and runs inference locally so workers can use it where connectivity is unreliable. The worker makes the pruning decision.
 
-**Winner, University of Waterloo Velocity Agri-Innovation Challenge, March 2026.**
+Velocity named EcoNode one of four winners of the March 2026 Agri-Food Innovation Challenge and credited Sheldon Mbuh, Harkamal Bhamra, and Gursimran Chadha. [Velocity announcement](https://www.velocityincubator.com/news/farming-for-canadian-grown-agri-food-innovation)
 
-## How it works
+## Public engineering record
 
-- A computer vision model (YOLOv8) learns from expert pruning decisions
-- Guidance is delivered through AR glasses worn by the human pruner, not a phone and not a robot
-- Processing runs at the edge so the system works offline in the field
+| Resource | What it covers |
+| --- | --- |
+| [Architecture](docs/architecture.md) | Capture, branch perception, expert review, offline inference, and the wearable MVP |
+| [Model development](docs/model-development.md) | Candidate labeling, training, evaluation, and on-device benchmarking tools |
+| [Roadmap](docs/roadmap.md) | Evidence required to advance from a model baseline to field evaluation |
+| [Browser demonstration](https://sheldonmbuh.github.io/econode/demo/) | A synthetic walkthrough of when a wearable could present or withhold guidance |
 
-## Status
+The challenge result is public. Model accuracy, sustained offline inference, AR integration, and field effectiveness are development milestones. The browser demonstration evaluates fixed synthetic inputs with illustrative thresholds. It uses no camera, trained model, or orchard data.
 
-- Data collection planned for the winter pruning season (December to January)
-- First working demo targeted for January
-- Field tests with growers planned for February to March
-- Validated with Steve Duff and Cesar Cappa (OMAFRA)
-
-## Team
-
-Built by a team of three University of Waterloo students: Sheldon Mbuh, Gursimran, and Harkamal.
-
-## About this repository
-
-This is the project page for EcoNode on GitHub. Code and datasets will be published here as the build progresses and as permissions allow.
+EcoNode is a collaborative project. Publication of team software, datasets, annotations, images, model weights, and research artifacts requires the relevant team and data-owner approvals.
