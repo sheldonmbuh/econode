@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guidance Walkthrough | EcoNode</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="demo.js" defer></script>
+</head>
+<body>
+  <header class="page-head">
+    <div class="wrap">
+      <a href="../">EcoNode project</a>
+      <h1>Guidance walkthrough</h1>
+      <p>Explore when an offline wearable could show a review cue or wait for better input. The examples use simulated readings.</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <h2>Choose a simulated scene</h2>
+    <div class="demo-grid">
+      <div class="panel">
+        <label for="scene">Scene</label>
+        <select id="scene">
+          <option value="clear">Clear view</option>
+          <option value="occluded">Branch partly obscured</option>
+          <option value="stale">Frame delayed</option>
+        </select>
+        <p>Each example uses a fixed illustrative score and frame age.</p>
+        <noscript>Enable JavaScript to switch scenes.</noscript>
+      </div>
+      <div class="panel">
+        <dl>
+          <dt>Detection score</dt><dd id="score">0.92</dd>
+          <dt>Frame age</dt><dd id="age">80 ms</dd>
+        </dl>
+        <output id="guidance" for="scene" aria-live="polite">Show a review cue</output>
+        <p id="reason">The input meets both illustrative thresholds.</p>
+      </div>
+    </div>
+    <p>The browser displays example decisions only. EcoNode’s orchard protocol, model, and AR integration are still in development.</p>
+  </main>
+</body>
+</html>
